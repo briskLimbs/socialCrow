@@ -1,0 +1,68 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    
+<div class="content-wrapper bg-light">
+  <div class="col-12 grid-margin">
+    {% if message %}
+      <div class="alert alert-success">{{message}}</div>
+    {% endif %}
+
+    {% for error in _errors %}
+      <div class="alert alert-danger">{{error}}</div>
+    {% endfor %}
+    <!-- content here -->
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">SocialCrow Settings</h4>
+        <div class="alert alert-info col-md-6 col-sm-12">Add {% verbatim %}{{hook('socialCrow')}}{% endverbatim %} anywhere to show widget</div>
+        <form class="form-sample" name="general-settings" method="post">
+          <div class="row">
+            <div class="col-md-3">
+              <div class="form-group row">
+                <label class="col-sm-12 col-form-label">Facebook</label>
+                <div class="col-sm-12">
+                  <input type="text" name="facebook" class="form-control" placeholder="Facebook username" value="{{widget.facebook}}" />
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group row">
+                <label class="col-sm-12 col-form-label">Twitter</label>
+                <div class="col-sm-12">
+                  <input type="text" name="twitter" class="form-control" placeholder="Twitter username" value="{{widget.twitter}}" />
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group row">
+                <label class="col-sm-12 col-form-label">Instagram</label>
+                <div class="col-sm-12">
+                  <input type="text" name="instagram" class="form-control" placeholder="Instagram username" value="{{widget.instagram}}" />
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group row">
+                <label class="col-sm-12 col-form-label">Pinterest</label>
+                <div class="col-sm-12">
+                  <input type="text" name="pinterest" class="form-control" placeholder="Pinterest username" value="{{widget.pinterest}}" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="float-right">
+            <button type="submit" name="update" type="button" class="btn btn-gradient-primary btn-icon-text">
+              <i class="mdi mdi-file-check btn-icon-prepend"></i>
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- content-wrapper ends -->
+        
+        
+{% endblock %}

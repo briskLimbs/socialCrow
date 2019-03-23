@@ -1,0 +1,11 @@
+{
+  "name" : "socialCrow",
+  "display_name": "Social Crow",
+  "file": "socialCrow.php",
+  "author": "Saqib Razzaq",
+  "autor_website": "https://github.com/saqirzzq",
+  "date": "2019, 03, 23",
+  "description": "Add social page buttons anywhere",
+  "version": "0.1",
+  "state": "Beta"
+}
